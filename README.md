@@ -117,22 +117,17 @@ File("path-to-masked-file").printWriter().use { blob.toJson(FilePrinter(it, true
 
 ## Publishing artifacts
 
-The json-blob artifacts are published to both jcenter and github packages.
-To publish them both the following commands need to be run:
+The json-blob artifact is published to jcenter.
+To publish the following command need to be run:
 ```
-./gradlew publish
 ./gradlew bintrayUpload
-```
-or run the task:
-```
-./gradlew publishAndBintrayUpload
 ```
 
 ## Release
 
 This is using the Gradle release plugin https://github.com/researchgate/gradle-release
 
-The release is configured to publish the artifacts to both Bintray and Github and depends on the `publishAndBintrayUpload` task.
+The release is configured to publish the artifact to Bintray and depends on the `bintrayUpload` task.
 
 ```
 ./gradlew release

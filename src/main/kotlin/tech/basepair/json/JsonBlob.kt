@@ -14,8 +14,6 @@
  */
 package tech.basepair.json
 
-import java.util.*
-
 /**
  * Utility for building a String that represents a JSON object.
  * The JsonBlob object is immutable and adding to the JSON Object or JSON array will result in a new object each time.
